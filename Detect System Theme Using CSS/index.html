@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Detect OS (Dark or Light) Theme with CSS</title>
+    <!-- CSS Part Begins -->
+    <style>
+        :root {
+            --background: #121212;
+            --foreground: #fff;
+            --color: #ff4754;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --background: #fff;
+                --foreground: #121212;
+                --color: #ff4754;
+            }
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: "Open Sans", sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--color);
+            margin-bottom: 0.6rem;
+        }
+
+        a {
+            display: inline-block;
+
+            user-select: none;
+            text-decoration: none;
+            color: var(--foreground);
+
+            margin-top: 4rem;
+            padding: 1rem 2.4rem;
+            border-radius: 0.2rem;
+
+            background: var(--color);
+        }
+    </style>
+    <!-- CSS Part Ends -->
+</head>
+
+<body>
+    <main>
+        <h1>Detect OS (Dark or Light) Theme with CSS</h1>
+        <a href="#">Button</a>
+    </main>
+</body>
+
+</html>
